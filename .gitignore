@@ -80,3 +80,14 @@ local.xml
 .Trashes
 Thumbs.db
 ehthumbs.db
+
+.ipynb_checkpoints/
+src/
+jupyter/day1/MNIST_train.csv
+jupyter/day1/MNIST_tes.csv
+jupyter/day1/Wofklows/
+jupyter/day1/Samples/
+jupyter/day1/sample/
+jupyter/day4/cats_and_dogs_filtered.zip
+tf-env311/
+
