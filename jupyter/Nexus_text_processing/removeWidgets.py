@@ -1,19 +1,18 @@
-# import nbformat
-
-# nb = nbformat.read("Nexus_Text_Processing_and_Generation_copy.ipynb", as_version=4)
-
-# if "widgets" in nb.metadata:
-#     del nb.metadata["widgets"]
-
-# nbformat.write(nb, "Nexus_Text_Processing_and_Generation_copy.ipynb")
 import nbformat
 
-with open("Nexus_Text_Processing_and_Generation_copy.ipynb", "r", encoding="utf-8") as f:
-    nb = nbformat.read(f, as_version=4)
+source_path = "Nexus_Text_Processing_and_Generation.ipynb"
+target_path = "latest.ipynb"
 
-# This will raise errors if the notebook is malformed
-nbformat.validate(nb)
+# Read the source notebook
+with open(source_path, "r", encoding="utf-8") as f:
+    src_nb = nbformat.read(f, as_version=4)
 
-# Optionally write it back to fix minor issues
-with open("Nexus_Text_Processing_and_Generation_copy.ipynb", "w", encoding="utf-8") as f:
-    nbformat.write(nb, f)
+# Create a new empty notebook and copy cells
+tgt_nb = nbformat.v4.new_notebook()
+tgt_nb.cells = src_nb.cells
+
+# Write the new notebook to the target path
+with open(target_path, "w", encoding="utf-8") as f:
+    nbformat.write(tgt_nb, f)
+
+print(f"Copied {len(src_nb.cells)} cells from {source_path} to {target_path}")
