@@ -62,6 +62,7 @@ env/
 /share/
 /local/
 
+
 # Editors and IDEs
 .project
 .settings
@@ -91,4 +92,3 @@ jupyter/day1/sample/
 jupyter/day4/cats_and_dogs_filtered.zip
 tf-env311/
 new_env/
-jupyter/Nexus_text_processing/.env:1
