@@ -53,7 +53,7 @@ build/
 dist/
 
 # Virtual environment
-.env/
+.env
 venv/
 env/
 /bin/
